@@ -1,0 +1,225 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+img {
+    max-width: 100%;   
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.img-section {
+    flex: 0 0 55%;
+}
+
+.login-section {
+    flex: 0 0 45%;
+    padding: 10px 0;
+    max-width: 348px;
+    margin: 0 0 10px;
+    height: 526px;
+
+}
+
+.logo {
+    position: absolute;
+    top: 76px;
+    left: 865px;
+    background-image: url(https://static.cdninstagram.com/rsrc.php/v3/yr/r/NL0hPV-L09m.png);
+    background-position: 0px 0px;
+    background-size: 176px 186px;
+    width: 174px;
+    height: 50px;
+    background-repeat: no-repeat;
+    display: center;
+    cursor: pointer;
+    
+}
+
+.login-section .white-bg input:focus {
+    border-color: #43474c;
+    box-shadow: 0 0 0 0 #696c6f;
+}
+.login-section .white-bg button:hover{
+    background-color:#1475cf;
+}
+
+.white-bg {
+
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -8px;
+    padding-top: auto;
+    
+}
+
+.top{
+    padding-top: 18px;
+}
+
+.white-bg input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    color: #262626;
+    font-size: 12px;
+    outline: none;
+}
+
+
+.white-bg button {
+    width: 100%;
+    background-color: #0095f6;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 10px 0;
+    line-height: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.or {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.or span {
+    background-color: #dbdbdb;
+    height: 1px;
+    width: 100%;
+}
+
+.or p {
+    margin: 0 5%;
+    text-transform: UPPERCASE;
+    font-weight: 600;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+a.fb-login {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+a.fb-login img {
+    width: 16px;
+    margin-right: 10px;
+}
+
+a.fb-login p {
+    font-size: 14px;
+    color: #385185;
+    font-weight: 600;
+}
+
+a.forgot-pass {
+    color: #00376b;
+    font-size: 12px;
+}
+
+.mt {
+    margin-top: 19px;
+}
+
+.white-bg p {
+    font-size: 14px;
+}
+
+.white-bg p a {
+    margin-left: 8px;
+    font-weight: 600;
+    color: #0095f6;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.get-app p {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 20px 10px 20px;
+}
+
+.get-app a {
+    margin: 8px;
+}
+
+.get-app a img {
+    height: 40px;
+}
+
+footer {
+    padding-bottom: 80px;
+}
+
+footer ol {
+    list-style-type: none;
+    display: flex;
+}
+
+footer ol li {
+    margin: 0 8px;
+}
+
+footer ol li a {
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+footer small {
+    text-align: center;
+    color: #8e8e8e;
+    font-size: 12px;
+    padding-left: 490px; 
+}

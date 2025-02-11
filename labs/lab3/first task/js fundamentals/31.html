@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script>
+
+            "use strict";
+
+            // function expressions
+            // another  syntax for creating a function that is called a "function expression"
+            // it allows us to create a new function in the middle of any expression
+            let sayHi = function() {
+                alert("hi !");
+            };
+
+
+            // function is a value :
+            function sayHi() {
+                alert("hi !");
+            }
+
+            alert(sayHi);
+
+            // we can copy a function to another variable :
+            function sayHi() { // create
+                alert("hi !");
+            }
+
+            let f = sayHi; // copy
+
+            f(); // hi ! -> run the copy (it works)
+            sayHi(); // hi ! -> this still works too 
+
+
+            // callback functions -> should ask the question and, depending on the user’s answer, call yes() or no()
+            function ask(question, yes, no) {
+
+                if (confirm(question)) {
+                    yes();
+                }
+                else { 
+                    no();
+                }
+
+            }
+
+            function showOk() {
+                alert("you agreed.");
+            }
+
+            function showCancel() {
+                alert("you canceled the execution.");
+            }
+
+            // usage : functions showOk, showCancel are passed as arguments to ask
+            ask("do you agree ?", showOk, showCancel);
+
+            // the arguments showOk and showCancel of ask are called "callback functions" or "just callbacks"
+
+            function ask(question, yes, no) {
+
+                if (confirm(question)) {
+                    yes();
+                }
+                else { 
+                    no();
+                }
+
+            }
+
+            ask (
+
+                "do you agree ?",
+
+                function() { // -> anonymous
+                    alert("you agreed.");  
+                },
+                
+                function() { // -> anonymous
+                    alert("you canceled the execution."); 
+                }
+
+            )
+
+
+            // function expression vs function declaration
+
+            // function declaration -> a function, declared as a separate statement, in the main code flow :
+            function sum(x, y) {
+                return x + y;
+            }
+
+            // function expression -> a function, created inside an expression or inside another syntax construct
+            let sum = function(x, y) {
+                return x + y;
+            };
+
+            // a function declaration can be called earlier than it is defined
+
+            // a function expression is created when the execution reaches it and is usable only from that moment
+
+            
+        </script>
+
+    </body>
+</html>

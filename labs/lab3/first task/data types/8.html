@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script>
+
+            "use strict";
+
+            // task 1 : filter range
+
+            function filterRange(arr, x, y) {
+                return arr.filter(item => (x <= item && item <= y));
+            }
+
+            let arr = [5, 3, 8, 1];
+
+            let filtered = filterRange(arr, 1, 4);
+
+            alert(filtered); // 3,1 (matching values)
+
+            alert(arr); // 5,3,8,1 (not modified)
+
+
+            // task 2 : sort in decreasing order
+            arr = [5, 2, 1, -10, 8];
+
+            arr.sort((x, y) => y - x);
+
+            alert(arr);
+
+
+            // task 3 : copy and sort array
+            function copySorted(arr) {
+                return arr.slice().sort();  
+            }
+
+            arr = ["HTML", "JavaScript", "CSS"];
+
+            let sorted = copySorted(arr);
+
+            alert(sorted);
+            alert(arr);
+
+
+            // task 4 : create an extendable calculator
+            function Calculator() {
+
+                this.methods = {
+
+                    "-": (x, y) => x - y,
+                    "+": (x, y) => x + y
+
+                };
+
+                this.calculate = function(s) {
+
+                    let split = s.split(" "),
+                    
+                    x = +split[0],
+                    op = split[1],
+                    y = +split[2];
+
+                    if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+                        return NaN;
+                    }
+
+                    return this.methods[op](a, b);
+
+                };
+
+                this.addMethod = function(name, func) {
+                    this.methods[name] = func;
+                };
+
+            }
+
+
+            // task 5 : map to names
+            let mark = { name: "Mark", age: 25 };
+            let hayden = { name: "Hayden", age: 24 };
+            let andy = { name: "Andy", age: 23 };
+
+            let users = [ mark, hayden, andy ];
+
+            let names = users.map(item => item.name);
+
+            alert(names); // Mark, Hayden, Andy
+
+
+            // task 6 : sort users by age
+            function sortByAge(arr) {
+                arr.sort((x, y) => x.age - y.age);
+            }
+
+            mark = { name: "Mark", age: 25 };
+            andy = { name: "Andy", age: 23 };
+            hayden = { name: "Hayden", age: 24 };
+            
+            arr = [ mark, hayden, andy ];
+
+            sortByAge(arr);
+
+            // now: [mark, hayden, andy]
+            alert(arr[0].name); // Mark
+            alert(arr[1].name); // Hayden
+            alert(arr[2].name); // Andy
+
+        </script>
+
+    </body>
+</html>

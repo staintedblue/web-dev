@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            // variable naming
+
+            // examples of valid names :
+            let userName;
+            let test123;
+            let $ = 1; // declared a variable with the name "$"
+            let _ = 2; // and now a variable with the name "_"
+
+            // examples of incorrect variable names :
+            // cannot start with a digit -> let 1a;
+            // hyphens "-"" aren't allowed in the name -> let my-name;
+            // an assignment without "use strict" (would cause an error in strict mode)
+
+            // non-latin letters are allowed, but not recommended :
+            let имя = '...';
+            let 我 = '...';
+
+            // reserved names are not allowed and give a syntax error :
+            // let let = 5; // can't name a variable "let", error!
+            // let return = 5; // also can't name it "return", error!
+
+            alert($ + _);
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script>
+
+            "use strict";
+
+            // garbage collection
+
+
+            // reachability -> the main concept of memory management in JavaScript
+            // simply put, "reachable" values are those that are accessible or usable somehow. 
+            // they are guaranteed to be stored in memory
+
+
+            // garbage collector ->  a background process in the JavaScript engine
+            // it monitors all objects and removes those that have become unreachable
+
+
+            // interlinked objects
+            function marry(man, woman) { // function marry “marries” two objects by giving them references to each other 
+                
+                woman.husband = man;
+                man.wife = woman;
+
+                return { // and returns a new object that contains them both
+                    father : man,
+                    mother : woman
+                }
+
+            }
+
+            let family = marry({
+        
+                name: "Kai"
+                }, {
+                name: "Jennie"
+
+            });
+
+            delete family.father;
+            delete family.mother.husband;
+
+
+            // internal algorithms
+            // the basic garbage collection algorithm is called "mark-and-sweep"
+            // the "garbage collection" steps :
+            // the garbage collector takes roots and "marks" (remembers) them
+            // then it visits and "marks" all references from them
+            // then it visits marked objects and marks their references -> all visited objects are remembered, so as not to visit the same object twice in the future
+            // and so on until every reachable (from the roots) references are visited
+            // all objects except marked ones are removed
+            
+        </script>
+
+    </body>
+</html>

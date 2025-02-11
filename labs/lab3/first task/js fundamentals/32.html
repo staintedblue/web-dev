@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // arrow functions : let f = (arg1, arg2, arg3, ... , argN) => expression
+            let sum = (x, y) => x + y; // (x, y) => x + y -> means a function that accepts two arguments named x and y, upon the execution, it evaluates the expression x + y and returns the result
+
+            alert(sum(2, 6)); // 8
+
+            /* this arrow function is a shorter form of :
+            let sum = function(x, y) {
+                return x + y;
+            } */
+            
+            let double = n => n * 2; // roughly the same a s: let double = function(n) { return n * 2 }
+
+            alert(double(6)); // 12
+
+
+            // multiline arrow functions 
+            sum = (x, y) => { // the curly brace opens a multiline function
+                
+                let result = x + y;  
+
+                return result; // if we use curly braces, then we need an explicit "return"
+            
+            };
+
+            alert(sum(6, 8)); // 14
+         
+        </script>
+
+    </body>
+</html>

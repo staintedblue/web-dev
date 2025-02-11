@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // Object methods, "this"
+
+            // "this" in methods
+            // to access the object, a method can use the "this" keyword
+            let user = {
+
+                name : "Andy",
+                age : 23,
+
+                sayHi() {
+                    alert(this.name); // "this" is the "current object"
+                }
+            
+            };
+
+            user.sayHi(); // Andy
+
+
+            // "this" is not bound
+            // the value of this is evaluated during the run-time, depending on the context
+            // e.g., here the same function is assigned to two different objects and has different "this" in the calls :
+            user = { name : "Andy" };
+            let admin = { name : "Admin" };
+
+            function sayHi() {
+                alert(this.name );
+            }
+
+            // use the same function in two objects
+            user.f = sayHi;
+            admin.f = sayHi;
+
+            // these calls have different this
+            // "this" inside the function is the object "before the dot"
+            user.f(); // Andy  (this == user)
+            admin.f(); // Admin  (this == admin)
+
+            admin['f'](); // Admin (dot or square brackets access the method – doesn't matter)
+
+
+            // arrow functions have no "this"
+            // arrow functions are special : they don’t have their "own" this
+            // if we reference this from such a function, it’s taken from the outer "normal" function
+            user = {
+
+                firstName : "Andy",
+
+                sayHi() {
+
+                    let arrow = () => alert(this.firstName);
+                    arrow();
+
+                }
+
+            };
+
+            user.sayHi(); // Andy
+
+        </script>
+
+    </body>
+</html>

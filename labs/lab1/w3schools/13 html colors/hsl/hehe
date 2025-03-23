@@ -1,0 +1,2 @@
+HSL stands for hue, saturation, and lightness.
+hsla(hue, saturation, lightness, alpha)

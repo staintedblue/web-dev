@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // constructor function -> technically are regular functions :
+            // they are named with capital letter first
+            // they should be executed only with "new" operator
+            function User(name) {
+
+                this.name = name;
+                this.isAdmin = false;
+
+            }
+
+            let user = new User("Andy"); // the "new" operator
+
+            alert(user.name); // Andy
+            alert(user.isAdmin); // false
+
+
+            // when a function is executed with "new" :
+            // a new empty object is created and assigned to "this"
+            // the function body executes, usually it modifies this, adds new properties to it
+            // the value of this is returned
+
+
+            // constructor mode test : new.target -> check whether it was called with new or without it (inside a function)
+            function User() {
+                alert(new.target);
+            }
+
+            // without "new" :
+            User(); // undefined
+
+            // with "new" :
+            new User(); // function User { ... }
+
+
+            // returns from constructors -> constructors do not have a return statement (usually)
+            // their task is to write all necessary stuff into "this", and it automatically becomes the result
+
+            // if there is a return statement, then the rule is simple :
+            // if return is called with an object, then the object is returned instead of this
+            // if return is called with a primitive, it’s ignored
+
+            // return with an object returns that object, in all other cases this is returned
+            function BigUser() {
+
+                this.name = "Mark";
+
+                return { name : "Godzilla" }; // <-- returns this object
+
+            }
+
+            alert(new BigUser().name); // Godzilla, got that object
+
+
+            // methods in constructor
+            function User(name) {
+
+                this.name = name;
+
+                this.sayHi = function() {
+                    alert( "my name is : " + this.name );
+                };
+
+            }
+
+            let andy = new User("Andy");
+
+            andy.sayHi(); // my name is : Andy
+
+        </script>
+
+    </body>
+</html>

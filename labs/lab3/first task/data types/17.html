@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script>
+
+            "use strict";
+
+            
+            // JSON methods, toJSON -> the JSON (JavaScript Object Notation) is a general format to represent values and objects
+            // JSON -> a data format that has its own independent standard and libraries for most programming languages
+            // JavaScript provides methods JSON.stringify to serialize into JSON and JSON.parse to read from JSON
+            // JavaScript provides methods :
+            // JSON.stringify -> to convert objects into JSON 
+            // JSON.parse -> to convert JSON back into an object
+
+            // an example for JSON.stringify :
+            let student = {
+                name: "Mark",
+                age: 25,
+                isAdmin: false,
+                courses: ["html", "css", "js"],
+                spouse: null
+            };
+
+            let json = JSON.stringify(student); // takes the object and converts it into a string
+
+            alert(typeof json); // we've got a string!
+
+            alert(json);
+
+            /* JSON-encoded object:
+            {
+                "name": "Mark",
+                "age": 25,
+                "isAdmin": false,
+                "courses": ["html", "css", "js"],
+                "spouse": null
+            }
+            */
+
+            // JSON.stringify can be applied to primitives as well and supports following data types :
+            // Objects { ... }
+            // Arrays [ ... ]
+            // Primitives : strings, numbers, boolean values true/false, null.
+
+            // examples :
+            // a number in JSON is just a number
+            alert(JSON.stringify(1)) // 1
+
+            // a string in JSON is still a string, but double-quoted
+            alert(JSON.stringify("test")) // "test"
+
+            alert(JSON.stringify(true)); // true
+
+            alert(JSON.stringify([1, 2, 3])); // [1,2,3]
+
+            // the full syntax of JSON.stringify -> let json = JSON.stringify(value[, replacer, space]) 
+            // value -> a alue to encode
+            // replacer -> array of properties to encode or a mapping function function(key, value)
+            // space -> amount of space to use for formatting
+
+
+            // JSON.parse -> to decode a JSON-string
+            // the syntax : let value = JSON.parse(str[, reviver]);
+            // str -> JSON-string to parse
+            // reviver -> optional function(key,value) that will be called for each (key, value) pair and can transform the value
+
+            // examples :
+            // stringified array
+            let numbers = "[0, 1, 2, 3]";
+
+            numbers = JSON.parse(numbers);
+
+            alert(numbers[1]); // 1
+
+            // or for nested objects :
+            let userData = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+
+            let user = JSON.parse(userData);
+
+            alert( user.friends[1] ); // 1
+
+        </script>
+
+    </body>
+</html>        

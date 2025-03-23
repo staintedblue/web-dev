@@ -1,0 +1,88 @@
+.album-holder div {
+    border: solid 1px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 5px;
+    width: 50px;
+    gap: 26px;
+    margin-left: 130px;
+}
+
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 16px;
+    margin-top: 6px;
+}
+
+a:hover {
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.album-holder {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    color: rgb(172, 205, 252);
+}
+
+.album-item {
+    display: flex;
+    flex-direction: column; /* Размещаем элементы вертикально */
+    align-items: center; /* Центрируем контент внутри */
+    text-align: center;
+}
+
+.album-holder .album-item button {
+    background-color: rgb(172, 205, 252); /* Красный фон */
+    color: white; /* Белый текст */
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.album-holder .album-item button:hover {
+    background-color: rgb(241, 209, 237); /* Темно-красный при наведении */
+}
+
+h1 {
+    font-family: monospace;
+    /* margin-left: 1%; */
+    text-align: center;
+}
+
+nav {
+    background-color: rgb(172, 205, 252);
+    position: fixed; /* Закрепляет навбар */
+    top: 0;
+    width: 100%; /* Растягиваем на всю ширину */
+    padding: 15px; /* Добавляем отступы */
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: monospace;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.loading-text {
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(7, 12, 19); /* Цвет текста */
+    text-align: center;
+    margin-top: 300px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    68% { opacity: 0.5; }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // the "if(...)" statement -> evaluates a condition in parentheses and, if the result is true, executes a block of code
+            let year = prompt("in which year was ECMAScript-2015 specification published ?", "");
+
+            if (year == 2015) alert("you are right !");
+
+
+            // another way :
+            if (year == 2015) {
+                alert("you are right !");
+            }
+
+
+            // another way (more complex) :
+            if (year == 2015) {
+                alert("that is correct !");
+                allert("you are so smart !")
+            }
+
+
+            // boolean conversion : the "if(...)" statement -> evaluates the expression in its parentheses and converts the result to a boolean
+            if (0) { // 0 is falsy
+                // some code
+            }
+
+            if (1) { // 1 is truthy
+                // some code
+            }
+
+            let cond = (year == 2015); 
+
+            if (cond) {
+                // some code
+            }
+
+
+            // the "else" clause -> executes when the condition is falsy (an optional else block)
+            if (year == 2015) {
+                alert("you guessed it right !");
+            }
+            else {
+                alert("how can you be so wrong ? :("); // any value except 2015
+            }
+
+
+            // several conditions : "else if" -> to test several variants of a condition
+            if (year < 2015) {
+                alert("too early...");
+            }
+            else if (year > 2015) {
+                alert("too late");
+            }
+            else {
+                alert("exactly !");
+            }
+
+
+            // conditional operator "?" 
+            let accessAllowed;
+            let age = prompt("how old are you?", "");
+
+            if (age > 18) {
+                accessAllowed = true;
+            }
+            else {
+                accessAllowed = false;
+            }
+            
+            alert(accessAllowed);
+
+            let result = condition ? value1 : value2; // "?" -> the condition is evaluated: if it’s truthy then value1 is returned, otherwise – value2
+
+            accessAllowed = (age > 18) ? true : false; // "?" same here 
+
+
+            // multiple "?"
+            age = prompt("age ?", 18);
+
+            let message = (age < 3) ? "hi, baby !" :
+                (age < 18) ? "hello, dude !" :
+                (age < 100) ? "greetings !" : "what an unusual age !";
+            
+            alert(message);
+
+            if (age < 3) {
+                message = "hi, baby !";
+            }
+            else if (age < 18) {
+                message = "hello, dude !";
+            }
+            else if (age < 100) {
+                message = "greetings !";
+            }
+            else {
+                message = "what an unusual age !";
+            }
+
+            // non-traditional use of "?" 
+            let company = prompt("which company created JavaScript ?", "");
+
+            (company == "Netscape") ? // it’s not recommended to use the question mark operator in this way
+                alert("right !") : alert("wrong :(");
+
+            // proper using :
+            if (company == "Netscape") {
+                alert("right !");
+            }
+            else {
+                alert("wrong :(");
+            }
+            
+
+        </script>
+
+    </body>
+</html>

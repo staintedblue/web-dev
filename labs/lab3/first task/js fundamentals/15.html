@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // type conversions
+            
+            // string conversion -> when we need the string form of a value
+            let value = true;
+            
+            alert(typeof value); // boolean
+            
+            value = String(value); // now value is a string "true"
+
+            alert(typeof value); // string
+
+
+            // numer conversions 
+            alert("6" / "2"); // 3, strings are converted to numbers
+
+            let s = "123";
+
+            alert(typeof s); // string
+
+            let num = Number(s); // becomes a number 123
+
+            alert(typeof num);
+
+            let age = Number("an arbitrary string instead of a number"); // NaN
+
+            alert(age); // NaN, conversion failed -> the string is not a valid number
+
+            alter(Number(true)); // 1
+            alter(Number(false)); // 0
+
+            alter(Number("123z")); // NaN (error reading a number at "z")
+
+
+            // boolean conversion
+            alert(Boolean(1)); // true
+
+            alert(Boolean(0)); // false
+
+            alert(Boolean("hehe")); // true
+
+            alert(Boolean("")); // false
+
+            alert(Boolean("0")); // the string with zero "0" is true
+
+            alert(Boolean(" ")); // spaces, also true (any non-empty string is true)
+
+        </script>
+
+
+    </body>
+</html>

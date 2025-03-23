@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            // alert -> shows a message and waits for the user to press “OK” (the mini-window with the message is called a "modal window")
+            alert("JavaScript");
+
+
+            // prompt -> a function that accepts two arguments and shows a modal window with a text message, an input field for the visitor, and the buttons OK/Cancel
+            // prompt -> shows a message asking the user to input text. it returns the text or, if Cancel button or Esc is clicked, null
+            result = prompt(title, [genre]); // the second parameter is optional
+
+            let age = prompt("how old are you ?", 26);
+
+            alert(`you are ${age} years old !`); // you are 26 tears old
+
+
+            // confirm -> a function that shows a modal window with a question and two buttons : OK and Cancel
+            // confirm -> shows a message and waits for the user to press “OK” or “Cancel”, it returns true for OK and false for Cancel/Esc
+            result = confirm(question);
+
+            let isBoss = confirm("are you the boss ?");
+
+            alert(isBoss); // true if OK is pressed
+        </script>
+    </body>
+</html>

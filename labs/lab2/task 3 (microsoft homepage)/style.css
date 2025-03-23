@@ -1,0 +1,242 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,sans-serif;
+    
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 0 5%;
+}
+
+header button {
+    height: 50px;
+    padding: 4px;
+    background-color: white;
+    border: none;
+    margin: 3px;
+    cursor: pointer;
+}
+header button:hover{
+    text-decoration-line: underline;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+}
+
+header .left-side {
+    display: flex;
+    flex-direction: row;
+}
+
+header .left-side-links{
+    margin-top: 6px;
+}
+
+header .left-side .logo img {
+    width: 155px;
+    height: 60px;
+}
+
+header .right-side {
+    display: flex;
+    flex-direction: row;
+    margin-top: 6px;
+}
+
+header .right-side .products select {
+    border: none;
+    background-color: white;
+    color: rgb(56, 56, 56);
+    font-size: 13px;
+}
+
+
+header .right-side .search img {
+    width: 16px;
+    margin-left: 2px;
+    margin-bottom: -2px;
+}
+
+header .right-side .login button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 4px;
+}
+
+header .right-side .login img {
+    margin-left: 11px;
+    width: 32px;
+}
+
+header .right-side .login a {
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+}
+
+main {
+    width: 100%;
+    margin-left: 0%;
+    height: 120%;
+}
+
+.big-pic {
+    background-image: url('images/big.png');
+    height: 515px;
+    padding-left: 64px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    margin: 5px;
+    width: 96%
+}
+
+.big-pic .p1 {
+    font-size: 32px;
+    font-weight: bolder;
+    color: rgb(31, 28, 28);
+    width: 430px;
+    margin-bottom: -26px;
+}
+
+.big-pic .p2 {
+    color: rgb(45, 41, 41);
+    width: 600px;
+    font-weight: 39vh;
+    margin-bottom: 20px;
+}
+
+.big-pic #black {
+    font-size: 16px;
+    padding: 0 24px 0 24px;
+    height: 40px;
+    width: 180px;
+    font-weight: bold;
+    background-color: rgb(37, 36, 36);
+    border: none;
+}
+.big-pic button:hover{
+    text-decoration: underline;
+}
+
+.big-pic #white {
+    font-size: 16px;
+    padding: 0 24px 0 24px;
+    height: 40px;
+    width: 180px;
+    border: none;
+    font-weight: bold;
+    margin-left: 5px;
+    background-color: rgb(232, 235, 235)
+}
+
+.big-pic button #six {
+    text-decoration: none;
+    color: white;
+}
+
+.big-pic button #one {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    width: 86%;
+    margin-left: 8.5%;
+    /* margin-right: 20%; */
+    height: 500px;
+    margin-top: 44px;
+    display: flex;
+    flex-direction: row;
+    /* align-content: center; */
+    justify-content: space-between;
+}
+
+footer .frame {
+    width: 460px;
+}
+
+footer .frame img {
+    width: 320px;
+    margin: 0 13px 12px;
+    margin-bottom: 23px;
+}
+
+footer .frame button {
+    text-align: left;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+}
+footer .frame-links:hover{
+    text-decoration: underline;
+}
+footer .frame-links {
+    display: flex;
+    flex-direction: row;
+    margin-left:20px;
+}
+
+footer .frame-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color:rgb(31, 113, 168);
+    font-weight: 600;
+}
+
+footer .frame #bigger-p {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: inherit;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+
+footer .frame #small-p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    margin-left: 13px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 42px;
+    padding-bottom: 26px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    background-color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.nav-item img {
+    width: 20px; /* Adjust size as needed */
+}
+.nav-item span {
+    font-size: 14px;
+}

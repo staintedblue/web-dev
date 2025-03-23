@@ -1,0 +1,27 @@
+.holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    margin-left: 110px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    font-family: monospace;
+}
+
+.holder div {
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    border: solid 1px;
+    padding: 0 20px 10px 20px;
+    text-align: center;
+}
+
+p {
+    height: 68px;
+}
+
+a {
+    font-family: monospace;
+    font-size: 20px;
+}

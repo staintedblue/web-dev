@@ -1,0 +1,73 @@
+nav {
+    background-color: rgb(172, 205, 252);
+    position: fixed; /* Закрепляет навбар */
+    top: 0;
+    width: 100%; /* Растягиваем на всю ширину */
+    padding: 15px; /* Добавляем отступы */
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+h1 {
+    font-family: monospace;
+    font-size: 33px;
+    text-align: center;
+}
+
+h2 {
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-family: monospace;
+    font-size: 17px;
+    text-align: center;
+}
+
+fieldset {
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(172, 205, 252);
+    align-items: center; 
+    padding: 10px;
+    border-radius: 6px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+input {
+    padding: 5px;
+    border: 1px solid rgb(172, 205, 252);
+    border-radius: 3px;
+    font-size: 16px;
+    height: 45px; /* Фиксируем высоту */
+    width: 200px; /* Можно изменить под ваш дизайн */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: monospace;
+
+}
+
+button {
+    background-color: rgb(172, 205, 252);
+    border: none;
+    padding: 2px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: monospace;
+
+}
+
+button:hover {
+    background-color: rgb(172, 205, 252);
+}

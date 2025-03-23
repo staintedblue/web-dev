@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // the "switch" statement -> can replace multiple if checks, it gives a more descriptive way to compare a value with multiple variants
+            // the switch has one or more case blocks and an optional default 
+
+            /* the syntax :
+            switch(x) {
+                case "value1":  // if (x === "value1")
+                    ...
+                    [break]
+
+                case 'value2':  // if (x === 'value2')
+                    ...
+                    [break]
+
+                default:
+                    ...
+                    [break]
+                } */
+
+            let a = 2 + 2;
+
+            switch (a) { 
+
+                case 3: // the switch starts to compare a from the first case variant that is 3
+                    alert("too small"); // the match fails
+                    break;
+                case 4: // then 4
+                    alert("exactly !"); // that’s a match, so the execution starts from case 4 until the nearest break
+                    break;
+                case 5:
+                    alert("too big");
+                    break;
+                default:
+                    alert( "i don't know such values");
+
+            }
+
+            
+            // grouping of "case" -> the ability to "group" cases is a side effect of how switch/case works without break
+            a = 3;
+
+            switch (a) {
+
+                case 4:
+                    alert('Right!');
+                    break;
+
+                case 3: // (*) grouped two cases -> both 3 and 5 show the same message
+                case 5: // the execution of case 3 starts from the line (*) and goes through case 5, because there’s no break
+                    alert("wrong !");
+                    alert("why don't you take a math class ?");
+                    break;
+
+                default:
+                    alert("the result is strange. really.");
+
+            }
+
+
+            // type matters 
+            let arg = prompt("enter a value ?");
+
+            switch (arg) {
+
+                case "0" : // for 0, 1, the first alert runs
+                case "1" :
+                    alert("one or zero");
+                    break;
+
+                case "2" : // for 2 the second alert runs
+                    alert("two");
+                    break;
+
+                case "3" : // but for 3, the result of the prompt is a string "3", which is not strictly equal === to the number 3
+                    alert("never executes !"); // so we’ve got a dead code in case 3 ! 
+                    break;
+                
+                default : // the default variant will execute
+                    alert("an unknown value");
+
+            }
+
+        </script>
+
+    </body>
+</html>

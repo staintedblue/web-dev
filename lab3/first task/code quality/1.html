@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // the command “debugger” -> pauses the code
+            function hello(name) {
+
+                let phrase = `hello, ${name} !`;
+
+                debugger; // the debugger stops here
+
+                say(phrase);
+
+            }
+
+
+            // logging -> to output something to console from our code
+            // open console to see
+            for (let i = 0; i < 5; i++) {
+                console.log("value,", i);
+            }
+            
+        </script>
+
+    </body>
+</html>

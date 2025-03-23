@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script>
+        
+            "use strict";
+
+            // iterables
+
+            // Symbol.iterator
+            // to make the range object iterable (and thus let for..of work) we need to add a method to the object named Symbol.iterator (a special built-in symbol just for that)
+            let range = {
+
+                from: 1,
+                to: 5
+
+            };
+
+            // 1. call to for..of initially calls this
+            range[Symbol.iterator] = function() {
+
+                // ...it returns the iterator object :
+                // 2. Onward, for..of works only with the iterator object below, asking it for next values
+                return {
+
+                    current: this.from,
+                    last: this.to,
+
+                    // 3. next() is called on each iteration by the for..of loop
+                    next() {
+
+                        // 4. it should return the value as an object {done:.., value :...}
+                        if (this.current <= this.last) {
+                            return { done: false, value: this.current++ };
+                        }
+                        else {
+                            return { done: true };
+                        }
+                    
+                    }
+
+                };
+
+            };
+
+            // now it works!
+            for (let num of range) {
+                alert(num); // 1, then 2, 3, 4, 5
+            }
+
+            // so, the iterator object is separate from the object it iterates over
+
+
+            // string is iterable 
+            // for a string, for..of loops over its characters :
+            for (let char of "test") {
+                // triggers 4 times: once for each character
+                alert(char); // t, then e, then s, then t
+            }
+
+
+            // calling an iterator explicitly
+            let s = "hello";
+
+            let iterator = str[Symbol.iterator]();
+
+            while (true) {
+
+                let result = iterator.next();
+
+                if (result.done) break;
+
+                alert(result.value); // outputs characters one by one
+            
+            }
+
+
+            // iterables and array-likes
+            // iterables -> objects that implement the Symbol.iterator method
+            // array-likes -> objects that have indexes and length, so they look like arrays
+
+
+            // Array.from -> takes an iterable or array-like value and makes a "real" Array from it
+            // the syntax : Array.from(obj[, mapFn, thisArg])
+            let arrayLike = {
+                0: "Hello",
+                1: "World",
+                length: 2
+            };
+
+            arr = Array.from(arrayLike); 
+            alert(arr.pop()); // World (method works)
+
+
+            arr = Array.from(range);
+
+            alert(arr); // 1,2,3,4,5 (array toString conversion works)
+
+        </script>
+
+    </body>
+</html>

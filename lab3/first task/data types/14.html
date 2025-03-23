@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script>
+        
+            "use strict";
+            
+            // task 1 : destructuring assignment
+            let user = {
+                name: "Mark",
+                years: 25
+            };
+
+            let {name, years: age, isAdmin = false} = user;
+
+            alert(name); // Mark
+            alert(age); // 25
+            alert(isAdmin); // false
+
+            // task 2 : the maximal salary
+            function topSalary(salaries) {
+
+                let maxSalary = 0;
+                let maxName = null;
+
+                for(const [name, salary] of Object.entries(salaries)) {
+                    if (maxSalary < salary) {
+                        maxSalary = salary;
+                        maxName = name;
+                    }
+                }
+
+                return maxName;
+
+            }
+
+            let salaries = {
+                "Andy": 100,
+                "Hayden": 300,
+                "Mark": 250
+            };
+
+            alert(topSalary(salaries)); // Pops up with "Hayden", who has the highest salary
+
+        </script>
+
+    </body>
+</html>        

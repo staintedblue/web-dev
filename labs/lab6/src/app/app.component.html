@@ -1,9 +1,8 @@
-<h1> App root component </h1>
+<nav>
+  <h1><a [routerLink]="['/']">Album</a></h1>
+  <div><a [routerLink]="['/albums']">Albums</a>
+    <a [routerLink]="['/about']">About</a>
+  </div>
 
-<ul>
-  <li><a [routerLink]="['home']">home</a></li>
-  <li><a [routerLink]="['about']">about</a></li>
-  <li><a [routerLink]="['albums']">albums</a></li>
-</ul>
-
+</nav>
 <router-outlet />

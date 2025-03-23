@@ -6,6 +6,8 @@ export interface Product {
   price: number;
   description: string;
   rating: number;
+  categoryId: number;
+  likes:number;
 }
 
 export const products = [
@@ -24,6 +26,8 @@ export const products = [
         'battery capacity: 4575.0 mAh',
     link: 'https://kaspi.kz/shop/p/google-pixel-8-8-gb-128-gb-seryi-114016975/?c=750000000',
     rating: 0,
+    categoryId: 1,
+    likes:0,
 
   },
   {
@@ -41,6 +45,8 @@ export const products = [
         'battery capacity: 4821.0 mAh',
     link: 'https://kaspi.kz/shop/p/google-pixel-fold-12-gb-256-gb-chernyi-113360114/?c=750000000',
     rating: 5,
+    categoryId: 1,
+    likes:0,
 
   },
   {
@@ -57,7 +63,8 @@ export const products = [
         'microphone: Yes',
     link: 'https://kaspi.kz/shop/p/google-pixel-buds-a-series-chernyi-108764457/?c=750000000',
     rating: 5,
-
+    categoryId: 4,
+    likes:0,
   },
   {
     id: 4,
@@ -72,6 +79,9 @@ export const products = [
         'total storage capacity: 256.0 GB',
     link: 'https://kaspi.kz/shop/p/lenovo-thinkpad-t14-gen-3-21cf0027rt-chernyi-108519702/?c=750000000',
     rating: 5,
+    categoryId: 2,
+    likes:0,
+
 
   },{
     id: 5,
@@ -86,6 +96,8 @@ export const products = [
         'main material: plastic',
     link: 'https://kaspi.kz/shop/p/lego-forsazh-2-nissan-skail-76917-detalei-319-sht-108313086/?c=750000000',
     rating: 0,
+    categoryId: 4,
+    likes:0,
 
   },{
     id:6,
@@ -100,6 +112,9 @@ export const products = [
         "optical sensor resolution: 4000.0 dpi",
     link:"https://kaspi.kz/shop/p/xiaomi-mi-portable-mouse-2-bxsbmw02-black-chernyi-102134869/?c=750000000",
     rating: 5,
+    categoryId: 2,
+    likes:0,
+
 
   },{
     id:7,
@@ -117,6 +132,8 @@ export const products = [
         "operating time: up to 24 hours",
     link:"https://kaspi.kz/shop/p/google-pixel-watch-zolotistyi-seryi-112726642/?c=750000000",
     rating: 4.5,
+    categoryId: 3,
+    likes:0,
 
   }
   ,{
@@ -133,6 +150,8 @@ export const products = [
         "inputs: HDMI, ,DisplayPort",
     link:"https://kaspi.kz/shop/p/aoc-25g3zm-bk-chernyi-108668975/?c=750000000",
     rating: 0,
+    categoryId: 2,
+    likes:0,
 
   },{
     id:9,
@@ -149,6 +168,9 @@ export const products = [
         "battery capacity: 4800.0 mAh",
     link:"https://kaspi.kz/shop/p/google-pixel-6a-6-gb-128-gb-belyi-106250314/?c=750000000",
     rating: 5,
+    categoryId: 1,
+    likes:0,
+
 
   },{
     id:10,
@@ -161,6 +183,8 @@ export const products = [
         "clock frequency: 3200 MH",
     link:"https://kaspi.kz/shop/p/kingston-fury-beast-kf432c16bbk2-16-16-gb-101900315/?c=750000000",
     rating: 4.5,
+    categoryId: 2,
+    likes:0,
 
   }
 ];

@@ -18,81 +18,91 @@ export class AppComponent {
       name: 'Клир Д.: Атомные привычки',
       image: 'https://resources.cdn-kaspi.kz/img/m/p/h4c/h9a/86244289314846.png?format=gallery-large',
       description: '',
-      commentsNumber: 193,
+      rating: '★★★★★',
+      commentsNumber: 203,
       price: 2197,
       href: 'https://kaspi.kz/shop/p/klir-d-atomnye-privychki-117680550/?c=750000000'
     },
     {
-      name: 'Apple iPhone 13',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/h32/h70/84378448199710.jpg?format=gallery-large',
-      description: '128Gb черный',
-      commentsNumber: 3150,
-      price: 276201,
-      href: 'https://kaspi.kz/shop/p/apple-iphone-13-128gb-chernyi-102298404/?c=750000000'
+      name: 'Книга Кавамура Г.: Если все кошки в мире исчезнут',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h30/h4f/80896193953822.jpg?format=gallery-large',
+      description: '',
+      rating: '★★★★★',
+      commentsNumber: 17,
+      price: 2150,
+      href: 'https://kaspi.kz/shop/p/kavamura-g-esli-vse-koshki-v-mire-ischeznut-110504863/?c=750000000'
     },
     {
-      name: 'Apple iPhone 16 Pro Max',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/hcf/h69/87295489343518.png?format=gallery-large',
-      description: '256Gb черный',
-      commentsNumber: 384,
-      price: 689_390 ,
-      href: 'https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-chernyi-123787551/?c=750000000'
+      name: 'Олкотт Л. М.: Маленькие женщины',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h78/he7/80549372231710.jpg?format=gallery-large',
+      description: '',
+      rating: '★★★★★',
+      commentsNumber: 28,
+      price: 1358 ,
+      href: 'https://kaspi.kz/shop/p/olkott-l-m-malen-kie-zhenschiny-110124812/?c=750000000'
     },
     {
-      name: 'Apple iPhone 16 Pro Max',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/h41/h98/87295491702814.png?format=gallery-large',
-      description: '256Gb золотистый',
-      commentsNumber: 515,
-      price: 655_600,
-      href: 'https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-zolotistyi-123890547/?c=750000000'
+      name: 'Антуан де Сент-Экзюпери: Маленький принц',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hae/h68/64330738303006.jpg?format=gallery-large',
+      description: '',
+      rating: '★★★★★',
+      commentsNumber: 12,
+      price: 1550,
+      href: 'https://kaspi.kz/shop/p/antuan-de-sent-ekzjuperi-malen-kii-prints-103500777/?c=750000000'
     },
     {
-      name: 'Apple iPhone 16',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/hf3/h65/87295470731294.png?format=gallery-large',
-      description: '128Gb черный',
-      commentsNumber: 283,
-      price: 419_935,
-      href: 'https://kaspi.kz/shop/p/apple-iphone-16-128gb-chernyi-123713453/?c=750000000'
+      name: 'Книга Мураками Х.: Мой любимый sputnik',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h9b/h33/63813476778014.jpg?format=gallery-large',
+      description: '',
+      rating: '★★★★★',
+      commentsNumber: 9,
+      price: 3848,
+      href: 'https://kaspi.kz/shop/p/murakami-h-moi-ljubimyi-sputnik-26003817/?c=750000000'
     },
     {
-      name: 'Samsung Galaxy A55',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/h21/h36/85428899414046.png?format=gallery-large',
-      description: '3 ГБ/64 ГБ черный',
-      commentsNumber: 660,
-      price: 37_450,
-      href: 'https://kaspi.kz/shop/p/samsung-galaxy-a55-5g-8-gb-256-gb-temno-sinii-117420207/?c=750000000'
+      name: 'Мосян Тунсю: Благословение небожителей. Том 1',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/hec/hf7/64458940448798.jpg?format=gallery-large',
+      description: '',
+      rating: '★★★★★',
+      commentsNumber: 70,
+      price: 7000,
+      href: 'https://kaspi.kz/shop/p/mosjan-tunsju-blagoslovenie-nebozhitelei-tom-1-104139708/?c=750000000'
     },
     {
-      name: 'Apple iPhone 16 Pro',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/hbc/h31/87295483445278.png?format=gallery-large',
-      description: '256Gb черный',
-      commentsNumber: 378,
-      price: 642_805,
-      href: 'https://kaspi.kz/shop/p/apple-iphone-16-pro-256gb-chernyi-123887732/?c=750000000'
+      name: 'Бастеррика А.: Особое мясо',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h16/h41/64053600714782.jpg?format=gallery-large',
+      description: '',
+      rating: '★★★★★',
+      commentsNumber: 10,
+      price: 4990,
+      href: 'https://kaspi.kz/shop/p/basterrika-a-osoboe-mjaso-100952846/?c=750000000'
     },
     {
-      name: 'Apple iPhone 16 Pro Max',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/h74/ha7/87295492882462.png?format=gallery-large',
-      description: '256Gb серебристый',
-      commentsNumber: 326,
-      price: 664_893,
-      href: 'https://kaspi.kz/shop/p/apple-iphone-16-pro-max-256gb-serebristyi-123890752/?c=750000000'
+      name: 'Книга Кафка Ф.: Превращение',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h85/h15/63935266553886.jpg?format=gallery-large',
+      description: '',
+      rating: '★★★★★',
+      commentsNumber: 11,
+      price: 1823,
+      href: 'https://kaspi.kz/shop/p/kafka-f-prevraschenie-100308970/?c=750000000'
     },
     {
-      name: 'Samsung Galaxy A55',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/h21/h36/85428899414046.png?format=gallery-large',
-      description: '5G 8 ГБ/256 ГБ темно-синий',
-      commentsNumber: 627,
-      price: 188_900,
-      href: 'https://kaspi.kz/shop/p/samsung-galaxy-a55-5g-8-gb-256-gb-temno-sinii-117420207/?c=750000000'
+      name: 'Окакура К.: Книга чая',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h25/h63/84618059186206.jpg?format=gallery-large',
+      description: '',
+      rating: '★★★★★',
+      commentsNumber: 6,
+      price: 1600,
+      href: 'https://kaspi.kz/shop/p/okakura-k-kniga-chaja-115005434/?c=750000000'
     },
     {
-      name: 'Samsung Galaxy A25',
-      image: 'https://resources.cdn-kaspi.kz/img/m/p/hcf/h1c/84932692574238.jpg?format=gallery-large',
-      description: '5G 6 ГБ/128 ГБ темно-синий',
-      commentsNumber: 386,
-      price: 109_900,
-      href: 'https://kaspi.kz/shop/p/samsung-galaxy-a25-5g-6-gb-128-gb-temno-sinii-115937459/?c=750000000'
+      name: 'Исида С.: Токийский гуль: re. Том 7',
+      image: 'https://resources.cdn-kaspi.kz/img/m/p/h12/hef/64362696900638.jpg?format=gallery-large',
+      description: '',
+      rating: '★★★★★',
+      commentsNumber: 13,
+      price: 7250,
+      href: 'https://kaspi.kz/shop/p/isida-s-tokiiskii-gul-re-tom-7-103331124/?c=750000000'
     },
 
   ];

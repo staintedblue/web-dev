@@ -1,0 +1,29 @@
+nav {
+    background-color: rgb(172, 205, 252);
+    position: fixed; /* Закрепляет навбар */
+    top: 0;
+    width: 100%; /* Растягиваем на всю ширину */
+    padding: 15px; /* Добавляем отступы */
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.home-image {
+    /* width: 1000px; Укажите нужную ширину */
+    width: 1000px;
+    height: auto; /* Автоматическая высота */
+    display: flex;
+    margin: 10px auto; /* Центрируем картинку */
+    border-radius: 10px; /* Закругленные края (если нужно) */
+    margin-top: 10px;
+}
+
+h2 {
+    font-family: monospace;
+    font-size: 33px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 1px;
+}

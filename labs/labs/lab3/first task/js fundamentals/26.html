@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // nullish coalescing operator "??" -> returns the first argument if it’s not null/undefined
+            let user;
+
+            alert(user ?? "anonymous"); // anonymous (user is undefined)
+
+            user = "Mark";
+
+            alert(user ?? "anonymous"); // Mark (user is not null/undefined)
+
+            // we can also use a sequence of ?? to select the first value from a list that isn’t null/undefined :
+            let firstName = null;
+            let lastName = null;
+            let nickName = "supercoder";
+
+            // shows the first defined value :
+            alert(firstName ?? lastName ?? nickName ?? "anonymous"); // supercoder
+
+
+            // comparison with || -> doesn’t distinguish between false, 0, an empty string "" and null/undefined (falsy values)
+            let height = 0;
+
+            alert(height || 100); // 100 -> 0 < 100
+            alert(height ?? 100); // 0 -> a defined value
+
+
+            // the important difference between them is that :
+            // || returns the first truthy value
+            // ?? returns the first defined value
+
+
+            // the precedence of the "??" operator is the same as "||" :
+            let length = null;
+            let width = null;
+
+            // important : use parentheses
+            let area = (length ?? 100) * (width ?? 50);
+
+            alert(area); // 5000
+
+
+            // using ?? with && or || :
+            let x = (1 && 2) ?? 3; // works
+
+            alert(x); // 2
+
+        </script>
+
+    </body>
+</html>

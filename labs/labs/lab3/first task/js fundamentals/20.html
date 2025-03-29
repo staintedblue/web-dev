@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // comparisons :
+            // greater/less than: a > b, a < b
+            // greater/less than or equals: a >= b, a <= b
+            // equals: a == b (== means the equality test)
+            // not equals : in maths the notation is ≠, but in JavaScript it’s written as a != b
+
+
+            // boolean is the result -> eturn a boolean value : true – means “yes”, “correct” or “the truth” or false – means “no”, “wrong” or “not the truth” :
+            alert(2 > 1); // true 
+            alert(2 == 1); // false, cuz 2 != 1
+            alert(2 != 1) // true
+
+            let result = 5 > 4; // assign the result of the comparison
+            alert(result); // true
+
+            alert('Z' > 'A'); // true -> by ascii code
+            alert('Glow' > 'Glee'); // true -> G == G, l == l, o > e
+            alert('Bee' > 'Be'); // true
+
+
+            // comparison of different types :
+            alert("2" > 1); // true, string "2" becomes a number 2
+            alert("01" == 1); // true, string "01" becomes a number 1
+
+            alert( true == 1 ); // true
+            alert( false == 0 ); // true
+
+
+            let a = 0;
+            alert( Boolean(a) ); // false
+
+            let b = "0";
+            alert( Boolean(b) ); // true
+
+            alert(a == b); // true !
+
+
+            // strict equality (A strict equality operator === checks the equality without type conversion) :
+            alert(0 == false); // true
+            alert(0 == false); // true
+            alert(0 === false); // false, because the types are different
+
+
+            // comparison with null and undefined 
+
+            // for a strict equality check === :
+            alert(null === undefined); // false
+
+            // for a non-strict check == :
+            alert(null == undefined); // true -> a "sweet couple" : they equal each other (in the sense of ==), but not any other value
+
+            // for maths and other comparisons < > <= >= :
+            // null/undefined are converted to numbers : null becomes 0, while undefined becomes NaN 
+
+            // strange result : null vs 0 :
+            alert(null > 0);  // false -> comparisons convert null to a number, treating it as 0, that’s why (3) null >= 0 is true and (1) null > 0 is false
+            alert(null == 0); // false -> the equality check == for undefined and null is defined such that, without any conversions, they equal each other and don’t equal anything else, that’s why (2) null == 0 is false
+            alert(null >= 0); // true -> the result states that "null is greater than or equal to zero", so in one of the comparisons above it must be true, but they are both false
+
+            // an incomparable undefined :
+            alert(undefined > 0); // false -> because undefined gets converted to NaN and NaN is a special numeric value which returns false for all comparisons
+            alert(undefined < 0); // false -> because undefined gets converted to NaN and NaN is a special numeric value which returns false for all comparisons
+            alert(undefined == 0); // false -> returns false because undefined only equals null, undefined, and no other value
+
+        </script>
+        
+    </body>
+</html>

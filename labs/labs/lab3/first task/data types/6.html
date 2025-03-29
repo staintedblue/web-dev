@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // task 1 :
+            let styles = ["Jazz", "Blues"]; // create an array styles with items "Jazz" and "Blues"
+
+            styles.push("Rock-n-Roll"); // append "Rock-n-Roll" to the end
+
+            styles[Math.floor((styles.length - 1) / 2)] = "Classics"; // replace the value in the middle with “Classics”
+
+            alert(styles.shift()); // strip off the first value of the array and show it
+
+            styles.unshift("Rap", "Reggae"); // prepend Rap and Reggae to the array
+
+
+            // task 2 :
+            function sumInput() {
+
+                let numbers = [];
+
+                while (true) {
+
+                    let value = prompt("enter a number", 0);
+
+                    if (value === "" || value === null || !isFinite(value)) break;
+
+                    numbers.push(+value);
+
+                }
+
+                let sum = 0;
+
+                for (let number of numbers) {
+
+                    sum += number;
+
+                }
+
+                return sum;
+
+            }
+
+            alert(sumInput());
+
+        </script>
+
+    </body>
+</html>

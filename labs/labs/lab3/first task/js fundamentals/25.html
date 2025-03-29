@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use script";
+
+            // logical operators : || (OR), && (AND), ! (NOT), ?? (Nullish Coalescing)
+
+
+            // || (OR) -> meant to manipulate boolean values only : if any of its arguments are true, it returns true, otherwise it returns false
+            alert(true || true); // true
+            alert(false || true); // true
+            alert(true || false); // true
+            alert(false || false); // false
+
+            if (1 || 0) { // works just like if (true || false)
+                alert("truthy !");
+            }
+
+
+            let hour = 12;
+            let isWeekend = true;
+
+            if (hour < 10 || hour > 18 || isWeekend) {
+                alert("the office is closed."); // it's the weekend
+            }
+
+
+            // OR "||" finds the first truthy value 
+            alert(1 || 0); // 1 (1 is truthy)
+            alert(null || 1); // 1 (1 is the first truthy value)
+            alert(null || 0 || 1); // 1 (the first truthy value)
+            alert(undefined || null || 0); // 0 (all falsy, returns the last value)
+
+            // getting the first truthy value from a list of variables or expressions :
+            let firstName = "";
+            let lastName = "";
+            let nickName = "SuperCoder";
+
+            // OR || will choose the one that has the data and show it (or "Anonymous" if nothing set, that is, if all variables were falsy, "Anonymous" would show up)
+            alert(firstName || lastName || nickName || "Anonymous"); // SuperCoder 
+
+            // short-circuit evaluation :
+            true || alert("not printed");
+            false || alert("printed");
+
+
+            // && (AND) -> represented with two ampersands && : AND returns true if both operands are truthy and false otherwise
+            alert(true && true); // true
+            alert(false && true); // false
+            alert(true && false); // false
+            alert(false && false); // false
+
+
+            hour = 8;
+            let minute = 26;
+
+            if (hour == 8 && minute == 26) {
+                alert("the time is 08:26")
+            }
+
+            // AND “&&” finds the first falsy value :
+            // if the first operand is truthy, AND returns the second operand :
+            alert(1 && 0); // 0
+            alert(1 && 5); // 5
+
+            // if the first operand is falsy, AND returns it, the second operand is ignored :
+            alert(null && 5); // null
+            alert(0 && "no matter what"); // 0        
+            
+            alert(1 && 2 && null && 3); // null
+
+            alert(1 && 2 && 3); // 3, when all values are truthy, the last value is returned
+
+
+            // precedence of AND && is higher than OR ||
+
+
+            // ! (NOT) -> returns the inverse value
+            alert(!true); // false
+            alert(!0); // true
+
+            // a double NOT !! is sometimes used for converting a value to boolean type :
+            alert( !!"non-empty string" ); // true
+            alert( !!null ); // false
+            
+            
+            // tasks :
+            alert(null || 2 || undefined); // 2 -> the first truthy value
+
+            alert(1 && null && 2); // null -> the first falsy value from the list
+
+            let userName = prompt("who's there ?", "");
+
+            if (userName === "Admin") {
+
+            let pass = prompt("password ?", "");
+
+            if (pass === 'TheMaster') {
+                alert("welcome !");
+            } 
+            else if (pass === '' || pass === null) {
+                alert("canceled");
+            } 
+            else {
+                alert("wrong password");
+            }
+            } 
+            else if (userName === "" || userName === null) {
+                alert("canceled");
+            } 
+            else {
+                alert("i don't know you");
+            }
+
+        </script>
+
+    </body>
+</html>

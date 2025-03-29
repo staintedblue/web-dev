@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // object references and copying
+
+            // one of the fundamental differences of objects versus primitives is that objects are stored and copied “by reference”, 
+            // whereas primitive values: strings, numbers, booleans, etc – are always copied “as a whole value”
+
+            // a variable assigned to an object stores not the object itself, but its "address in memory" – in other words "a reference" to it
+
+            // the object is stored somewhere in memory (at the right of the picture), while the user variable (at the left) has a "reference" to it
+
+            // when an object variable is copied, the reference is copied, but the object itself is not duplicated
+
+            let user = {
+                name : "Andy",
+                age : 23
+            };
+
+            let admin = user; // copy the reference
+
+            admin.name = "Mark"; // changed by the "admin" reference
+
+            alert(user.name); // "Mark", changes are seen from the "user" reference
+
+
+            // comparison by reference -> two objects are equal only if they are the same object
+            let x = {};
+            let y = x;
+
+            alert(x == y); // true, both variables reference the same object
+            alert(x === y); // true
+
+            // two independent objects are not equal, even though they look alike (both are empty) :
+            let f = {};
+            let q = {};
+
+            alert(f == q); // false
+
+
+            // cloning and merging, Object.assign
+            // cloning -> we can create a new object and replicate the structure of the existing one, by iterating over its properties and copying them on the primitive leve
+            let clone = {}; // the new empty object
+
+            // let's copy all user properties into it
+            for (let key in user) {
+                clone[key] = user[key];
+            }
+
+            // now clone is a fully independent object with the same content
+            clone.name = "Mark"; // changed the data in it
+
+            alert(user.name); // still "Andy" in the original object
+
+
+            // Object.assign 
+            // the syntax is : Object.assign(dest, ...source), where "dest" is a target object, further arguments is a list of source objects
+            user = {
+                name : "Hayden"
+            }
+
+            let permission1 = {canView : true};
+            let permission2 = {canEdit : true};
+
+            // copies all properties from permissions1 and permissions2 into user
+            Object.assign(user, permission1, permission2);
+
+            // now user = { name : "Hayden", canView : true, canEdit : true }
+            alert(user.name); // Hayden
+            alert(user.canView); // true
+            alert(user.canEdit); // true
+
+            // if the copied property name already exists, it gets overwritten :
+            Object.assign(user, {name : "Peter"});
+
+            alert(user.name); // now user = { name : "Peter" }
+
+
+            // nested cloning 
+            user = {
+                name : "Andy",
+                sizes : {
+                    height : 180,
+                    weight : 50
+                }
+            };
+
+            alert(user.sizes.height); // 182
+
+            let clone = Object.assign({}, user);
+
+            alert(user.sizes === clone.sizes); // true, same object
+
+            // user and clone share sizes
+            user.sizes.weight = 68; // change a property from one place
+            alert(clone.sizes.weight); // 68, get the result from the other one
+
+
+            // structuredClone -> the call "structuredClone(object)"" clones the object with all nested properties
+            let clone = structuredClone(user);
+
+            alert(user.sizes === clone.sizes); // false, different objects
+
+            // user and clone are totally unrelated now
+            user.sizes.width = 68; // change a property from one place
+            alert(clone.sizes.width); // 50, not related
+
+            // the structuredClone method can clone most data types, such as objects, arrays, primitive values
+            // it also supports circular references, when an object property references the object itself (directly or via a chain or references)
+            let user = {};
+
+            user.me = user; // user.me references the user itself
+
+            let clone = structuredClone(user);
+            
+            alert(clone.me === clone); // true -> clone.me references the clone, not the user
+
+        </script>
+
+    </body>
+</html>

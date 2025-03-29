@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // loops : while and for 
+            // loops are a way to repeat the same code multiple times
+
+
+            // the "while" loop 
+            let i = 0;
+
+            // a single execution of the loop body is called an "iteration"
+            while (i < 3) { // shows 0, then 1, then 2
+                alert(i);
+                i++; // to stop the loop, otherwise, the loop would repeat (in theory) forever
+            }
+
+            // another way :
+            i = 3;
+            
+            while (i) { // when i becomes 0, the condition becomes falsy, and the loop stops
+                alert(i);
+                i--;
+            }
+
+
+            // the “do…while” loop
+            i = 0;
+            do {
+                alert(i);
+                i++;
+            } 
+            while (i < 3) {
+                // some code;
+            }     
+
+
+            // the "for" loop
+            for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
+                alert(i);
+            }
+
+            
+            // breaking the loop
+            let sum = 0;
+
+            while (true) {
+
+                let value = +prompt("enter a number", "");
+
+                if (!value) break; // we can force exit the loop at any time using the special break directiv
+
+                sum += value;
+
+            }
+
+            alert("sum : " + sum );     
+            
+            
+            // continue to the next iteration
+            for (let i = 0; i < 10; i++) {
+
+                // if true, skip the remaining part of the body
+                if (i % 2 == 0) continue; // the continue directive helps decrease nesting
+
+                alert(i); // 1, then 3, 5, 7, 9
+            }
+
+
+            // labels for break/continue 
+            outer: for (let i = 0; i < 3; i++) { // outer is the break <labelName> statement
+
+                for (let j = 0; j < 3; j++) {
+
+                    let input = prompt(`value at coords (${i},${j})`, "");
+
+                    // if an empty string or canceled, then break out of both loops
+                    if (!input) break outer; 
+
+                    // do something with the value...
+                    }
+            }
+
+            alert("done !");
+
+        </script>
+        
+    </body>
+</html>

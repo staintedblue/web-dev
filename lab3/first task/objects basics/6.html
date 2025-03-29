@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // create an object calculator with three methods : 
+            // read() prompts for two values and saves them as object properties with names a and b respectively
+            // sum() returns the sum of saved values
+            // mul() multiplies saved values and returns the result
+
+            let calculator = {
+
+                sum() {
+                    return this.x + this.y;
+                },
+
+                mul() {
+                    return this.x * this.y;
+                },
+
+                read() {
+                    this.x = +prompt("x ?", 0);
+                    this.y = +prompt("y ?", 0);
+                }
+
+            };
+
+            calculator.read();
+            alert(calculator.sum());
+            alert(calculator.mul());
+
+        </script>
+
+    </body>
+</html>

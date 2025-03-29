@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+            // type conversions :
+
+            "" + 1 + 0 
+            alert("" + 1 + 0); // 10 -> the addition with a string "" + 1 converts 1 to a string: "" + 1 = "1", and then we have "1" + 0, the same rule is applied
+
+            "" - 1 + 0 
+            alert("" - 1 + 0); // -1 -> the subtraction - (like most math operations) only works with numbers, it converts an empty string "" to 0
+
+            true + false 
+            alert(true + false); // 1, 1 + 0 = 1
+
+            6 / "3" 
+            alert(6 / "3" ); //2 -> 6 / 3 = 2
+
+            "2" * "3" 
+            alert("2" * "3" ); // 6 -> 2 * 3 = 6
+
+            4 + 5 + "px" 
+            alert(4 + 5 + "px"); // "9px" -> (4 + 5) + "px" = "9px"
+
+            "$" + 4 + 5 
+            alert("$" + 4 + 5); // "$45"
+
+            "4" - 2 
+            alert("4" - 2); // 2 -> 4 - 2 = 2
+
+            "4px" - 2 
+            alert("4px" - 2 ); // NaN
+
+            "  -9  " + 5 
+            alert("  -9  " + 5 ); // "  -9  5" -> the addition with a string appends the number 5 to the string
+
+            "  -9  " - 5 
+            alert("  -9  " - 5); // -14 -> he subtraction always converts to numbers, so it makes " -9 " a number -9 (ignoring spaces around it)
+
+            null + 1  
+            alert(null + 1); // 1 -> null becomes 0 after the numeric conversion
+
+            undefined + 1 
+            alert(undefined + 1 ); // NaN -> undefined becomes NaN after the numeric conversion
+
+            " \t \n" - 2 
+            alert(" \t \n" - 2 ); // -2 -> space characters are trimmed off string start and end when a string is converted to a number. here the whole string consists of space characters, such as \t, \n and a “regular” space between them. so, similarly to an empty string, it becomes 0
+            
+        </script>
+        
+    </body>
+</html>

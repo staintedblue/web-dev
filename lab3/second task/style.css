@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(176,218,236);  
+    display: flex; /* centering page content */
+    justify-content: center; /* горизонтальное выравнивание содержимого по центру */
+    align-items: center; /* вертикальное выравнивание содержимого по центру */
+    font-family: monospace;
+    color: rgb(70, 70, 70);
+}
+
+#todo-input {
+    width: 86%; /* ширина поля ввода */
+    padding: 6.8px; /* щтступы вокруг текста внутри поля ввода */
+    font-size: large; 
+    font-family: monospace;
+    border: solid 1px; /* граница поля ввода */
+    border-radius: 8px; /* скругление углов странцы */
+    border-color: rgb(253,213,231);
+}
+
+#todo-input:focus {
+    outline: none; /* убираем контур при фокусе */
+    border-color: rgb(254,251,186); /* меняем цвет границы на жёлтый при фокусе */
+}
+
+#input-container { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; /* распределяем пространство между и вокруг содержимого */
+
+}
+
+button {
+    padding: 13.5px 50px 6px 50px; /* отступы внутри кнопки */
+    border: none;
+    border-radius: 7.8px;
+    background-color: rgb(253,213,231); 
+    transition: background-color 300ms ease 0s; /* плавное изменение цвета фона кнопки с розового на жёлтый при нажатии */
+    position: relative; /* позволяет тексту оставаться на своём месте (по дефолту), если не будет изменении */
+}
+
+.button-text {
+    position: relative; /* same here */
+    top: -3px; /* смещение текста вверх на 3 пикселя */
+    display: block; /* превращает span в блочный элемент для выравнивание/отцентрирование текста в кнопке */
+    /* font-family: monospace; */
+    
+}
+
+button:hover { /* активируется при навидении курсора на кнопку */
+    background-color: rgb(254,251,186); /* изменение фона на желтый при наведении */
+}
+
+button img {
+    height: auto; /* высота изображения автоматически подстраивается */
+    width: 30px; 
+}
+
+.main { /* основной блок */ 
+    background-color: rgb(252, 252, 252);
+    padding: 20px 50px 20px 50px; /* отступы внутри блока */
+    width: 50%;
+    height: 60%;
+    border: none;
+    border-radius: 13px;
+}
+
+#no-content { /* блок, который отображается, когда у пользователя нет содержимого для просмотра (пустой список)
+    display: flex; /* выравнивание элементов в колонку */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* расстояние между элементами в колонке */
+    margin: 20px;
+}
+
+.checked {
+    text-decoration: line-through; /* зачеркивание текста */
+    color: rgb(186, 186, 186);
+}
+
+svg {
+    color: black; 
+    height: 20px;
+    width: auto; /* ширина иконок автоматически подстраивается */
+}
+
+li { /* список элементов -> внешний вид каждого элемента задач списке дел */
+    width: 100%; /* ширина каждого элемента списка */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 5px 0;
+    margin-right: 5px;
+}
+
+li label { /* к элементам внутри каждого <li> / отображение */
+    display: flex; 
+    align-items: center;
+    gap: 5px; /* расстояние между чекбоксом и текстом */
+    width: 70%;
+    overflow: hidden;
+}
+
+li p { /* параграфы в списке элементов */ 
+    width: 60%; /* ширина блока с текстом задачи */
+}
+
+ul { /* unordered list */
+    display: block; /* для отображение списка в виде блоков */
+    padding-inline-start: 0; 
+}
+
+#content-container {
+    height: 70%; /* высота контейнера с содержимым */
+    overflow-x: hidden; /* скрываем горизонтальный скроллбар*/
+}
+
+::-webkit-scrollbar {
+    display: none; /* скрываем скроллбар */
+}
+
+.delete {
+    background-color: transparent; /* задаём прозрачный фон для кнопки удаления */
+}

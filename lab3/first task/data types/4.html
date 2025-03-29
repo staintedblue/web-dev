@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use strict";
+
+
+            // strings -> the textual data is stored as strings
+
+            // quotes 
+            let single = 'single-quoted'; // single and double quotes are essentially the same
+            let double = "double-quoted"; // single and double quotes are essentially the same
+            let backticks = `backticks`; // allow us to embed any expression into the string, by wrapping it in ${…}
+
+            function sum(x, y) {
+                return x + y;
+            }
+
+            alert(`2 + 6 = ${sum(2, 6)}.`); // 2 + 6 = 8
+
+            // another advantage of using backticks is that they allow a string to span multiple lines
+            let guestList = `Guests :
+            * Mark
+            * Hayden
+            * Andy
+            `;
+
+            alert(guestList); // a list of guests, multiple lines
+
+
+            // special characters 
+            guestList = "Guests :\n * Mark\n * Hayden\n * Andy";
+
+            alert(guestList); // a multiline list of guests, same as above
+
+            // \n -> denotes a line break, new line
+            // \', \", \` -> quotes
+            // \\ -> backslash
+            // \t -> tab
+
+
+            //string length ->  a property
+            alert( `My\n`.length ); // 3 -> \n is a single “special” character
+            alert("markhyuck".length); // 9
+
+
+            // accessing characters -> to get a character at position pos, use square brackets [pos] or call the method str.at(pos)
+            // the first character starts from the zero position
+            let s = "jellyfish";
+
+            // the first character
+            alert(s[0]); // j
+            alert(s.at(0)); // j 
+
+            // last character
+            alert(s[s.length - 1]); // h
+            alert(s.at(-1) ); // h
+
+            alert(s[-2]); // undefined
+            alert(s.at(-2)); // s -> has a benefit of allowing negative position
+
+            // we can also iterate over characters using for..of :
+            for (let char of "jellyfish") {
+                alert(char); // j, e, l, l, y, f, i, s, h
+            }
+
+            
+            // strings are immutable -> can’t be changed, it is impossible to change a character
+            s = "blue";
+
+            s[0] = "c"; // error
+            alert(s[0]); // doesn't work
+
+
+            // changing the case -> methods toLowerCase() and toUpperCase()
+            alert("Interface".toUpperCase()); // INTERFACE
+            alert("Interface".toLowerCase()); // interface
+
+            alert("Interface"[0].toLowerCase()); // "i" ->  if we want a single character lowercased
+
+
+            // searching for a substring 
+            // str.indexOf ->  looks for the substr in str, starting from the given position pos, and returns the position where the match was found or -1 if nothing can be found
+            let s = "Widget with id";
+
+            alert(s.indexOf("Widget")); // 0, because "Widget" is found at the beginning
+            alert(s.indexOf("widget")); // -1, not found, the search is case-sensitive
+            alert(s.indexOf("id")); // 1, "id" is found at the position 1 (..idget with id)
+
+            s = "Widget with id";
+
+            alert(s.indexOf("id", 2) ) // 12
+
+            // if we’re interested in all occurrences, we can run indexOf in a loop. every new call is made with the position after the previous match
+            s = "As sly as a fox, as strong as an ox";
+
+            let target = "as"; // let's look for it
+
+            let pos = 0;
+
+            while (true) {
+
+                let foundPos = s.indexOf(target, pos);
+
+                if (foundPos == -1) break;
+
+                alert(`Found at ${foundPos}`);
+
+                pos = foundPos + 1; // continue the search from the next position
+
+            }
+
+            // or 
+            s = "As sly as a fox, as strong as an ox";
+            target = "as"; 
+
+            pos = -1;
+            while ((pos = str.indexOf(target, pos + 1)) != -1) {
+                alert( pos );
+            }
+
+
+            // str.lastIndexOf(substr, position) -> searches from the end of a string to its beginning, it would list the occurrences in the reverse order
+
+
+            // includes, startsWith, endsWith
+            // the method str.includes(substr, pos) returns true/false depending on whether str contains substr within
+            alert("Widget with id".includes("Widget")); // true
+
+            alert("Hello".includes("Bye")); // false
+
+            alert("Widget".includes("id")); // true
+
+            alert("Widget".includes("id", 3)); // false, from position 3 there is no "id"
+
+            // the methods str.startsWith
+            alert("Widget".startsWith("Wid")); // true, "Widget" starts with "Wid"
+
+            // the methods str.endsWith
+            alert("Widget".endsWith("get")); // true, "Widget" ends with "get"
+
+
+            // getting a substring -> substring, substr and slice
+            // str.slice(start [, end]) -> returns the part of the string from start to (but not including) end
+            s = "stringify";
+
+            alert(s.slice(0, 5)); // "strin", the substring from 0 to 5 (not including 5)
+            alert(s.slice(0, 1)); // "s", from 0 to 1, but not including 1, so only character at 0
+
+            // if there is no second argument, then slice goes till the end of the string 
+            alert(s.slice(2)); // "ringify", from the 2nd position till the end
+
+            // negative values for start/end are also possible. they mean the position is counted from the string end
+            // start at the 4th position from the right, end at the 1st from the right
+            alert(s.slice(-4, -1)); // "gif"
+
+
+            // str.substring(start [, end]) -> returns the part of the string between start and end (not including end)
+            // negative arguments are (unlike slice) not supported, they are treated as 0
+            s = "stringify";
+
+            // these are same for substring
+            alert(s.substring(2, 6)); // "ring"
+            alert(s.substring(6, 2)); // "ring"
+
+            // ...but not for slice
+            alert(s.slice(2, 6)); // "ring" (the same)
+            alert(s.slice(6, 2)); // "" (an empty string)
+
+
+            // str.substr(start [, length]) -> returns the part of the string from start, with the given length
+            // allows negative start
+            s = "stringify";
+
+            alert(s.substr(2, 4)); // "ring", from the 2nd position get 4 characters
+
+
+            // comparing strings -> strings are compared character-by-character in alphabetical order
+            // a lowercase letter is always greater than the uppercase :
+            alert("a" > "Z"); // true
+
+            // letters with diacritical marks are "out of order" :
+            alert("Österreich" > "Zealand"); // true
+
+
+            // str.codePointAt(pos) -> returns a decimal number representing the code for the character at position pos
+            // different case letters have different codes
+            alert("Z".codePointAt(0)); // 90
+            alert("z".codePointAt(0)); // 122
+            alert("z".codePointAt(0).toString(16)); // 7a (if we need a hexadecimal value)
+
+
+            // String.fromCodePoint(code) -> creates a character by its numeric code
+            alert(String.fromCodePoint(90)); // Z
+            alert(String.fromCodePoint(0x5a)); // Z (we can also use a hex value as an argument)
+
+
+            // str.localeCompare(str2) -> returns an integer indicating whether str is less, equal or greater than str2 according to the language rules :
+            // returns a negative number if str is less than str2
+            // returns a positive number if str is greater than str2
+            // returns 0 if they are equivalent
+            alert("Österreich".localeCompare("Zealand") ); // -1
+
+
+            // str.trim() – removes ("trims") spaces from the beginning and end of the string
+
+            // str.repeat(n) – repeats the string n times
+
+        </script>
+
+    </body>
+</html>

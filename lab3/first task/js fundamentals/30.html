@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+            "use script";
+
+            // functions -> the main “building blocks” of the program. 
+            // functions -> they allow the code to be called many times without repetition / perform a similar action in many places of the script
+
+
+            // function declaration -> to create a function
+            /* the syntax :
+            function name(parameter1, parameter2, ... parameterN) {
+                // body
+            } */
+
+            function showMessage() {  // the function keyword -> the name of the function -> a list of parameters between the parentheses -> "the function body" (the code of the function between curly braces)
+                alert("hellow, buddy !");
+            }
+
+            // function can be called by its name : showMessage() 
+            showMessage();
+
+
+            // local variables -> a variable declared inside a function is only visible inside that function
+            function showMessage() {
+
+                let message = "hello, i am JavaScript !"; // local variable
+
+                alert(message);
+
+            }
+
+            showMessage(); // hello, i am JavaScript !
+
+            alert(message); // error ! the variable is local to the function
+
+
+            // outer variable -> a function can access an outer variable as well
+            let userName = "Mark";
+
+            function showMessage() {
+
+                let message = "hello, " + userName + " !";
+
+                alert(message);
+            }
+
+            showMessage(); // hello, mark !
+
+            // the function has full access to the outer variable
+            userName = "Mark";
+
+            function showMessage() {
+
+                userName = "Andy"; // changed the outer variable
+
+                let message = "hello, " + userName + " !";
+
+                alert(message);
+
+            }
+
+            alert(userName); // Mark before the function call
+
+            showMessage();
+
+            alert(userName); // Andy, the value was modified by the function
+
+
+            // if a same-named variable is declared inside the function then it shadows the outer one :
+            userName = "Peter"; // 
+
+            function showMessage() {
+
+                let userName = "Isaac"; // declare a local variable
+
+                let message = "hello, " + userName + " !";
+
+                alert(message);
+
+            }
+
+            // the function will create and use its own userName
+            showMessage();
+
+            alert(userName); // Peter, unchanged, the function did not access the outer variable
+
+
+            // parameters -> to pass arbitrary data to functions using parameters
+            function showMessage(from, text) {
+
+                alert(from + " : " + text);
+
+            }
+
+            showMessage("Mark", "Hey, dude !"); // Mark : Hey, dude !
+            showMessage("Mark", "What's up ?"); // Mark : What's up ?
+            
+
+            // default values 
+            // if a function is called, but an argument is not provided, then the corresponding value becomes undefined
+            showMessage("Andy"); // Andy : undefined -> that’s not an error, as the value for text isn’t passed, it becomes undefined
+
+
+            // returning a value
+            function sum(x, y) {
+
+                return x + y;
+
+            }
+
+            let result = sum(2, 6);
+
+            alert(result); // 2 + 6 = 8
+
+            // there may be many occurrences of return in a single function :
+            function checkAge(age) {
+
+                if (age >= 18) {
+                    return true;
+                }
+                else {
+                    return confirm("do you have permission from your parents ?");
+                }
+
+            }
+
+            let age = prompt("how old are you ?", 18);
+
+            if (checkAge(age)) {
+                alert("access granted");
+            }
+            else {
+                alert("access denied");
+            }
+
+            // it is possible to use return without a value, that causes the function to exit immediately 
+            function showMovie(age) {
+
+                if (!checkAge(age)) { // if checkAge(age) returns false
+                    return;
+                }
+
+                alert("showing you the movie"); // then showMovie won’t proceed to the alert
+
+            }
+
+        </script>
+
+    </body>
+</html>

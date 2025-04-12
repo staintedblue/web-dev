@@ -1,204 +1,204 @@
-# commands
-# py -m pip install djangorestframework
-# py manage.py runserver
-# http://127.0.0.1:8000/api/companies
-# http://127.0.0.1:8000/api/companies/<id>
-# http://127.0.0.1:8000/api/companies/<id>/vacancies
-# http://127.0.0.1:8000/api/vacancies
-# http://127.0.0.1:8000/api/vacancies/<id>
-# http://127.0.0.1:8000/api/vacancies/top_ten
+// // commands
+// # py -m pip install djangorestframework
+// # py manage.py runserver
+// # http://127.0.0.1:8000/api/companies
+// # http://127.0.0.1:8000/api/companies/<id>
+// # http://127.0.0.1:8000/api/companies/<id>/vacancies
+// # http://127.0.0.1:8000/api/vacancies
+// # http://127.0.0.1:8000/api/vacancies/<id>
+// # http://127.0.0.1:8000/api/vacancies/top_ten
 
-# http://127.0.0.1:8000/api/companies/1/
-# http://127.0.0.1:8000/api/companies/1/vacancies/
+// # http://127.0.0.1:8000/api/companies/1/
+// # http://127.0.0.1:8000/api/companies/1/vacancies/
 
-# companies
+// # companies
 
-[
-    {
-        "id": 1,
-        "name": "MH-2686 Space Research Corp.",
-        "description": "MH-2686 Space Research Corp. specializes in advanced space exploration research, including the development of new technologies for interplanetary travel, the study of cosmic objects and planetary systems, as well as research in microgravity and space technologies. The company provides innovative solutions for scientific institutions and private organizations seeking to advance in space research and exploration.",
-        "city": "Kwangya",
-        "address": "2686 Spaceway Boulevard, Kwangya, Sector 7, Unit 127"
-    },
-    {
-        "id": 2,
-        "name": "NeoTech Innovators Ltd.\"",
-        "description": "A leading company in tech innovation.",
-        "city": "Neo City",
-        "address": "1234 Innovation Park, Techno Drive, Sector 26, Unit 127, Neo City, NX 2100, FutureLand."
-    },
-    {
-        "id": 3,
-        "name": "Oceanus Exploration Ltd.",
-        "description": "Oceanus Exploration focuses on exploring the deep ocean using robotic devices and underwater drones. The company is also working on creating sustainable ecosystems at the ocean floor.",
-        "city": "Atlantis",
-        "address": "Oceanic Research Facility, Poseidon Base, Atlantis Research Zone, Beneath the Pacific Trench, Oceanus City, 75000, Aquatica"
-    },
-    {
-        "id": 4,
-        "name": "MetaTech Labs",
-        "description": "MetaTech Labs develops virtual worlds and technologies for immersion in the metaverse, including creating unique spaces for gaming and social interactions.",
-        "city": "Neo City",
-        "address": "Virtual Reality Hub, Metaverse Tower, Pixel Plaza, Neon District, 1000 Digital Lane, MetaCity, 88888, Cyberspace."
-    },
-    {
-        "id": 5,
-        "name": "DeepDive Innovations",
-        "description": "DeepDive Innovations develops underwater cities and ecosystems capable of supporting life and sustainability at the ocean depths.",
-        "city": "Aquapolis",
-        "address": "Oceanic Research Complex, Trenchview Tower, Abyssal Basin, Marina District, 4500 Coral Crescent, Aquapolis, 00500, Deep Sea."
-    },
-    {
-        "id": 6,
-        "name": "The Arasaka Corporation",
-        "description": "A world-wide megacorporation dealing in corporate security, banking, and manufacturing.",
-        "city": "Night City",
-        "address": "Arasaka Security Complex, 2315 Industrial Drive, Santo Domingo, Night City, NC 100-15, Free State of California"
-    },
-    {
-        "id": 7,
-        "name": "CosmoSolutions",
-        "description": "CosmoSolutions works on creating sustainable and safe technologies for lunar and Martian colonization, including habitat construction and autonomous energy systems.",
-        "city": "Titan Base",
-        "address": "CosmoSolutions Research Center, Titan Colony Complex, Hexa-Lab District, Titan, Saturn, 1200-Space, Outer Rim."
-    },
-    {
-        "id": 8,
-        "name": "Neptune Enterprises",
-        "description": "Neptune Enterprises focuses on the commercial exploration of ocean resources, including the extraction of rare minerals from the ocean floor and the creation of underwater stations.",
-        "city": "Poseidon City",
-        "address": "Neptune Resource Hub, Abyssal Extraction Zone, Trident Quarters, Poseidon City, Oceanic Depths, 3090-NX, Deepwater District."
-    },
-    {
-        "id": 9,
-        "name": "Stellar Horizon Technologies",
-        "description": "Stellar Horizon specializes in technologies for exploring stellar systems and plans to launch the first interstellar expedition.",
-        "city": "Horizon Base",
-        "address": "Stellar Horizon Mission Control, Proxima Research Complex, Horizon Base, Proxima Centauri b, Alpha Quadrant, 0074-EX."
-    },
-    {
-        "id": 10,
-        "name": "Anteiku",
-        "description": "A network of cafes known for its exceptional coffee and unique dishes.",
-        "city": "Tokyo",
-        "address": "Anteiku Café, 1-12-34 Kichijoji, Musashino,Tokyo, 180-0004, Japan."
-    }
-]
+// [
+//     {
+//         "id": 1,
+//         "name": "MH-2686 Space Research Corp.",
+//         "description": "MH-2686 Space Research Corp. specializes in advanced space exploration research, including the development of new technologies for interplanetary travel, the study of cosmic objects and planetary systems, as well as research in microgravity and space technologies. The company provides innovative solutions for scientific institutions and private organizations seeking to advance in space research and exploration.",
+//         "city": "Kwangya",
+//         "address": "2686 Spaceway Boulevard, Kwangya, Sector 7, Unit 127"
+//     },
+//     {
+//         "id": 2,
+//         "name": "NeoTech Innovators Ltd.\"",
+//         "description": "A leading company in tech innovation.",
+//         "city": "Neo City",
+//         "address": "1234 Innovation Park, Techno Drive, Sector 26, Unit 127, Neo City, NX 2100, FutureLand."
+//     },
+//     {
+//         "id": 3,
+//         "name": "Oceanus Exploration Ltd.",
+//         "description": "Oceanus Exploration focuses on exploring the deep ocean using robotic devices and underwater drones. The company is also working on creating sustainable ecosystems at the ocean floor.",
+//         "city": "Atlantis",
+//         "address": "Oceanic Research Facility, Poseidon Base, Atlantis Research Zone, Beneath the Pacific Trench, Oceanus City, 75000, Aquatica"
+//     },
+//     {
+//         "id": 4,
+//         "name": "MetaTech Labs",
+//         "description": "MetaTech Labs develops virtual worlds and technologies for immersion in the metaverse, including creating unique spaces for gaming and social interactions.",
+//         "city": "Neo City",
+//         "address": "Virtual Reality Hub, Metaverse Tower, Pixel Plaza, Neon District, 1000 Digital Lane, MetaCity, 88888, Cyberspace."
+//     },
+//     {
+//         "id": 5,
+//         "name": "DeepDive Innovations",
+//         "description": "DeepDive Innovations develops underwater cities and ecosystems capable of supporting life and sustainability at the ocean depths.",
+//         "city": "Aquapolis",
+//         "address": "Oceanic Research Complex, Trenchview Tower, Abyssal Basin, Marina District, 4500 Coral Crescent, Aquapolis, 00500, Deep Sea."
+//     },
+//     {
+//         "id": 6,
+//         "name": "The Arasaka Corporation",
+//         "description": "A world-wide megacorporation dealing in corporate security, banking, and manufacturing.",
+//         "city": "Night City",
+//         "address": "Arasaka Security Complex, 2315 Industrial Drive, Santo Domingo, Night City, NC 100-15, Free State of California"
+//     },
+//     {
+//         "id": 7,
+//         "name": "CosmoSolutions",
+//         "description": "CosmoSolutions works on creating sustainable and safe technologies for lunar and Martian colonization, including habitat construction and autonomous energy systems.",
+//         "city": "Titan Base",
+//         "address": "CosmoSolutions Research Center, Titan Colony Complex, Hexa-Lab District, Titan, Saturn, 1200-Space, Outer Rim."
+//     },
+//     {
+//         "id": 8,
+//         "name": "Neptune Enterprises",
+//         "description": "Neptune Enterprises focuses on the commercial exploration of ocean resources, including the extraction of rare minerals from the ocean floor and the creation of underwater stations.",
+//         "city": "Poseidon City",
+//         "address": "Neptune Resource Hub, Abyssal Extraction Zone, Trident Quarters, Poseidon City, Oceanic Depths, 3090-NX, Deepwater District."
+//     },
+//     {
+//         "id": 9,
+//         "name": "Stellar Horizon Technologies",
+//         "description": "Stellar Horizon specializes in technologies for exploring stellar systems and plans to launch the first interstellar expedition.",
+//         "city": "Horizon Base",
+//         "address": "Stellar Horizon Mission Control, Proxima Research Complex, Horizon Base, Proxima Centauri b, Alpha Quadrant, 0074-EX."
+//     },
+//     {
+//         "id": 10,
+//         "name": "Anteiku",
+//         "description": "A network of cafes known for its exceptional coffee and unique dishes.",
+//         "city": "Tokyo",
+//         "address": "Anteiku Café, 1-12-34 Kichijoji, Musashino,Tokyo, 180-0004, Japan."
+//     }
+// ]
 
 
-# vacancies
-[
-    {
-        "id": 1,
-        "name": "Astronaut Engineer",
-        "description": "Design and test spacecraft systems.",
-        "salary": 286000.0,
-        "company": 1
-    },
-    {
-        "id": 2,
-        "name": "Space Research Scientist",
-        "description": "Conduct research on space phenomena.",
-        "salary": 86000.0,
-        "company": 1
-    },
-    {
-        "id": 3,
-        "name": "Space Research Scientist",
-        "description": "Conduct research on space phenomena.",
-        "salary": 86000.0,
-        "company": 1
-    },
-    {
-        "id": 4,
-        "name": "AI Development Engineer",
-        "description": "Design and implement artificial intelligence solutions for future tech products.",
-        "salary": 127000.0,
-        "company": 2
-    },
-    {
-        "id": 5,
-        "name": "Underwater Robotics Engineer",
-        "description": "Develop and maintain autonomous underwater vehicles for deep-sea exploration.",
-        "salary": 110000.0,
-        "company": 3
-    },
-    {
-        "id": 6,
-        "name": "Virtual Reality Designer",
-        "description": "Create immersive VR experiences for educational and entertainment purposes within the metaverse.",
-        "salary": 115000.0,
-        "company": 4
-    },
-    {
-        "id": 7,
-        "name": "Metaverse Experience Architect",
-        "description": "Design and build expansive virtual worlds for users to interact with and explore.",
-        "salary": 130000.0,
-        "company": 4
-    },
-    {
-        "id": 8,
-        "name": "Marine Technology Developer",
-        "description": "Research and develop technologies to support life and infrastructure at extreme ocean depths.",
-        "salary": 680000.0,
-        "company": 5
-    },
-    {
-        "id": 9,
-        "name": "Corporate Security Specialist",
-        "description": "Oversee and protect sensitive data, infrastructure, and corporate assets from cyber and physical threats.",
-        "salary": 200000.0,
-        "company": 6
-    },
-    {
-        "id": 10,
-        "name": "AI Ethics Officer",
-        "description": "Develop ethical guidelines for artificial intelligence applications within corporate systems.",
-        "salary": 127000.0,
-        "company": 6
-    },
-    {
-        "id": 11,
-        "name": "Martian Colonization Researcher",
-        "description": "Conduct research on soil, water, and atmospheric conditions for future human settlement on Mars.",
-        "salary": 140000.0,
-        "company": 7
-    },
-    {
-        "id": 12,
-        "name": "Lunar Habitat Engineer",
-        "description": "Develop self-sustaining habitats and energy systems for long-term habitation on the Moon.",
-        "salary": 150000.0,
-        "company": 7
-    },
-    {
-        "id": 13,
-        "name": "Deepwater Mining Engineer",
-        "description": "Design and oversee the extraction of valuable minerals from the ocean floor.",
-        "salary": 500000.0,
-        "company": 8
-    },
-    {
-        "id": 14,
-        "name": "Interstellar Propulsion Engineer",
-        "description": "Develop propulsion systems for spacecraft designed for interstellar travel.",
-        "salary": 350000.0,
-        "company": 9
-    },
-    {
-        "id": 15,
-        "name": "Restaurant Manager",
-        "description": "Oversee daily operations and manage customer relations in the café.",
-        "salary": 68000.0,
-        "company": 10
-    },
-    {
-        "id": 16,
-        "name": "Barista Trainer",
-        "description": "Train new baristas in the art of coffee brewing and customer service.",
-        "salary": 26000.0,
-        "company": 10
-    }
-]
+// # vacancies
+// [
+//     {
+//         "id": 1,
+//         "name": "Astronaut Engineer",
+//         "description": "Design and test spacecraft systems.",
+//         "salary": 286000.0,
+//         "company": 1
+//     },
+//     {
+//         "id": 2,
+//         "name": "Space Research Scientist",
+//         "description": "Conduct research on space phenomena.",
+//         "salary": 86000.0,
+//         "company": 1
+//     },
+//     {
+//         "id": 3,
+//         "name": "Space Research Scientist",
+//         "description": "Conduct research on space phenomena.",
+//         "salary": 86000.0,
+//         "company": 1
+//     },
+//     {
+//         "id": 4,
+//         "name": "AI Development Engineer",
+//         "description": "Design and implement artificial intelligence solutions for future tech products.",
+//         "salary": 127000.0,
+//         "company": 2
+//     },
+//     {
+//         "id": 5,
+//         "name": "Underwater Robotics Engineer",
+//         "description": "Develop and maintain autonomous underwater vehicles for deep-sea exploration.",
+//         "salary": 110000.0,
+//         "company": 3
+//     },
+//     {
+//         "id": 6,
+//         "name": "Virtual Reality Designer",
+//         "description": "Create immersive VR experiences for educational and entertainment purposes within the metaverse.",
+//         "salary": 115000.0,
+//         "company": 4
+//     },
+//     {
+//         "id": 7,
+//         "name": "Metaverse Experience Architect",
+//         "description": "Design and build expansive virtual worlds for users to interact with and explore.",
+//         "salary": 130000.0,
+//         "company": 4
+//     },
+//     {
+//         "id": 8,
+//         "name": "Marine Technology Developer",
+//         "description": "Research and develop technologies to support life and infrastructure at extreme ocean depths.",
+//         "salary": 680000.0,
+//         "company": 5
+//     },
+//     {
+//         "id": 9,
+//         "name": "Corporate Security Specialist",
+//         "description": "Oversee and protect sensitive data, infrastructure, and corporate assets from cyber and physical threats.",
+//         "salary": 200000.0,
+//         "company": 6
+//     },
+//     {
+//         "id": 10,
+//         "name": "AI Ethics Officer",
+//         "description": "Develop ethical guidelines for artificial intelligence applications within corporate systems.",
+//         "salary": 127000.0,
+//         "company": 6
+//     },
+//     {
+//         "id": 11,
+//         "name": "Martian Colonization Researcher",
+//         "description": "Conduct research on soil, water, and atmospheric conditions for future human settlement on Mars.",
+//         "salary": 140000.0,
+//         "company": 7
+//     },
+//     {
+//         "id": 12,
+//         "name": "Lunar Habitat Engineer",
+//         "description": "Develop self-sustaining habitats and energy systems for long-term habitation on the Moon.",
+//         "salary": 150000.0,
+//         "company": 7
+//     },
+//     {
+//         "id": 13,
+//         "name": "Deepwater Mining Engineer",
+//         "description": "Design and oversee the extraction of valuable minerals from the ocean floor.",
+//         "salary": 500000.0,
+//         "company": 8
+//     },
+//     {
+//         "id": 14,
+//         "name": "Interstellar Propulsion Engineer",
+//         "description": "Develop propulsion systems for spacecraft designed for interstellar travel.",
+//         "salary": 350000.0,
+//         "company": 9
+//     },
+//     {
+//         "id": 15,
+//         "name": "Restaurant Manager",
+//         "description": "Oversee daily operations and manage customer relations in the café.",
+//         "salary": 68000.0,
+//         "company": 10
+//     },
+//     {
+//         "id": 16,
+//         "name": "Barista Trainer",
+//         "description": "Train new baristas in the art of coffee brewing and customer service.",
+//         "salary": 26000.0,
+//         "company": 10
+//     }
+// ]
